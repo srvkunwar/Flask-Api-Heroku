@@ -30,9 +30,9 @@ def predict():
     prediction = model.predict(final_features)
     status = ""
     if prediction[0] == 0:
-        status = "Not Malicious"
-    else:
         status = "Malicious"
+    else:
+        status = "Not Malicious"
 
     return render_template('index.html', prediction_text='The file is {}'.format(status))
 
