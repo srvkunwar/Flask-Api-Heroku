@@ -2,19 +2,13 @@ import numpy as np
 from flask import Flask, render_template, jsonify, request
 import pickle
 app = Flask(__name__)
-filename = 'finalized_model.sav'
+filename = 'trained_model.ml'
 model = pickle.load(open(filename, 'rb'))
 
 
 @app.route('/')
 def welcome():
     return render_template("index.html")
-
-
-@app.route('/blog')
-def blogs():
-    return "<h1>This is my blog page</h1>"
-
 
 @app.route('/predict', methods=['POST'])
 def predict():
