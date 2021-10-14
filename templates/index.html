@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            display: block; padding: 5px; margin: 10px
+        }
+        h1, div,input{
+            text-align: center;
+            margin: 20px auto
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <h1>Malware Detection</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <input type="text" name="imagebase" placeholder="ImageBase" required="required" />
+            <input type="text" name="checksum" placeholder="CheckSum" required="required" />
+            <input type="text" name="sizeofstackcommit" placeholder="SizeOfStackCommit" required="required" />
+            <input type="text" name="sizeofstackreserve" placeholder="SizeOfStackReserve" required="required" />
+            <input type="text" name="sizeofuninitializeddata" placeholder="SizeOfUninitializedData" required="required" />
+            <input type="text" name="loadconfigurationsize" placeholder="LoadConfigurationSize" required="required" />
+            <input type="text" name="sizeofinitializeddata" placeholder="SizeOfInitializedData" required="required" />
+            <input type="text" name="loaderflags" placeholder="LoaderFlags" required="required" />
+            <input type="text" name="sizeofheapreserve" placeholder="SizeOfHeapReserve" required="required" />
+            <input type="text" name="resourcesmeansize" placeholder="ResourcesMeanSize" required="required" /> 
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    
+       <br>
+       <br>
+       {{ prediction_text }}
+    
+     </div>
+    
+</body>
+</html>
