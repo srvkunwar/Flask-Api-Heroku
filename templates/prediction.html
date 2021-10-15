@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Result</title>
+    <style>
+        body{
+            margin-top: 20px;
+            text-align: center;
+            background: rgb(209,207,228);
+background: linear-gradient(90deg, rgba(209,207,228,1) 0%, rgba(255,255,255,1) 99%, rgba(255,72,0,1) 100%);
+        }
+        span{
+            padding:20px; font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        {% for key, value in result.items() %}
+              <span style = "padding:10px; font-size:20px" class="label label-info">{{key}} <p style="display: inline; color:black">{{value}}</p> </span>
+              <div style="margin-bottom: 30px;" ></div>
+                
+        {% endfor %}
+        <h1 style="font-weight: bold;">{{prediction_text}}</h1>
+
+
+    
+</body>
+</html>
