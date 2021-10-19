@@ -57,24 +57,24 @@ body {
          <!-- Main Input For Receiving Query to our ML -->
         <form action="{{ url_for('prediction')}}"method="POST" id="Formid" >
             <fieldset>
-                <input type="text" name="imagebase" placeholder="Image Base" required="required" />
-                <input type="text" name="checksum" placeholder="Check Sum" required="required" /></fieldset>
+                <input type="number" step = "any" name="imagebase" placeholder="Image Base" required="required" />
+                <input  type="number" step = "any"  name="checksum" placeholder="Check Sum" required="required" /></fieldset>
             <fieldset>
-                <input type="text" name="sizeofstackcommit" placeholder="Size Of Stack Commit" required="required" />
-                <input type="text" name="sizeofstackreserve" placeholder="Size Of Stack Reserve" required="required" />
+                <input  type="number" step = "any"  name="sizeofstackcommit" placeholder="Size Of Stack Commit" required="required" />
+                <input  type="number" step = "any"  name="sizeofstackreserve" placeholder="Size Of Stack Reserve" required="required" />
             </fieldset>
             <fieldset>
-                <input type="text" name="sizeofuninitializeddata" placeholder="Size Of Uninitialized Data" required="required" />
-            <input type="text" name="loadconfigurationsize" placeholder="Load Configuration Size" required="required" />
+                <input  type="number" step = "any"  name="sizeofuninitializeddata" placeholder="Size Of Uninitialized Data" required="required" />
+            <input  type="number" step = "any"  name="loadconfigurationsize" placeholder="Load Configuration Size" required="required" />
             </fieldset>
             <fieldset>
                
-            <input type="text" name="sizeofinitializeddata" placeholder="Size Of Initialized Data" required="required" />
-            <input type="text" name="loaderflags" placeholder="Loader Flags" required="required" />
+            <input  type="number" step = "any"  name="sizeofinitializeddata" placeholder="Size Of Initialized Data" required="required" />
+            <input  type="number" step = "any" name="loaderflags" placeholder="Loader Flags" required="required" />
             </fieldset>
             <fieldset>
-                <input type="text" name="sizeofheapreserve" placeholder="Size Of Heap Reserve" required="required" />
-                <input type="text" name="resourcesmeansize" placeholder="Resources Mean Size" required="required" /> 
+                <input type="number" step = "any"  name="sizeofheapreserve" placeholder="Size Of Heap Reserve" required="required" />
+                <input  type="number" step = "any"  name="resourcesmeansize" placeholder="Resources Mean Size" required="required" /> 
             </fieldset>
 
             
@@ -87,7 +87,6 @@ body {
        <h1 style="color:white">{{ prediction_text }}</h1>
     
      </div>
-    
     
 </body>
 </html>
